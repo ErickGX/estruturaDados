@@ -1,42 +1,22 @@
-import java.util.Scanner;
-
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
 
-        pilha Pilha = new pilha();
+        Fila fila =  new Fila(5);
 
-        Pilha.CriarPilha(5);
-
-        Pilha.push(10);
-        Pilha.push(20);
-        Pilha.push(30);
-        Pilha.push(40);
-        Pilha.push(50);
-
-        System.out.println("Tamanho da pilha :" +Pilha.size());
-
-        System.out.println("Posicao na pilha do item procurado : " + Pilha.search(50));
-
-        System.out.println("Retirando um item do topo da pilha : " +Pilha.pop());
+        fila.ENQUEUE(100);
 
 
-        System.out.println("Tamanho da pilha :" +Pilha.pop());
+        System.out.println("Retirando elemento : " +fila.DEQUEUE());
 
-        System.out.println("Posicao na pilha do item procurado : " + Pilha.search(20));
+        System.out.println(fila.EMPTY());
 
+        fila.ENQUEUE(100);
 
+        System.out.println(fila.isFull());
 
-
-
-
-
-
-
-
+        System.out.println(fila.SIZE());
 
     }
 }
